@@ -41,6 +41,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -94,7 +95,7 @@ export default {
   },
   methods: {
     firstButtonClick() {
-      console.log('Hello!!!')
+      axios.get
     },
     addRow() {
       this.desserts.push({ name: 'New elem', calories: 580 })

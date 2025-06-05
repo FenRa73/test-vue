@@ -1,5 +1,6 @@
 <template>
   <!-- <AppHeader /> -->
+  <TopMenu />
   <HelloWorld />
 </template>
 
