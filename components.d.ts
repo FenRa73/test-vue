@@ -10,9 +10,18 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Card: typeof import('./src/components/Card.vue')['default']
+    Commands: typeof import('./src/components/Commands.vue')['default']
+    copy: typeof import('./src/components/Menu.vue')['default']
+    Footer: typeof import('./src/components/Footer.vue')['default']
+    Leagues: typeof import('./src/components/Leagues.vue')['default']
+    Liganame: typeof import('./src/components/Liganame.vue')['default']
+    Matches: typeof import('./src/components/Matches.vue')['default']
+    Menu: typeof import('./src/components/Menu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TeamMatches: typeof import('./src/components/TeamMatches.vue')['default']
+    Teams: typeof import('./src/components/Teams.vue')['default']
     TopMenu: typeof import('./src/components/TopMenu.vue')['default']
   }
 }

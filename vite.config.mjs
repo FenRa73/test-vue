@@ -62,6 +62,14 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+    proxy: {
+      '/api': {
+        target: 'https://api.football-data.org',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, ''),
+        secure:false,
+      },
+    },
   },
   css: {
     preprocessorOptions: {
