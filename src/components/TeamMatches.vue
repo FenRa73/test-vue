@@ -82,8 +82,6 @@ export default {
             dateFrom: null,
             dateTo: null,
             teamName: null,
-            page: 1,
-            itemsPerPage: 12,
             matches: [],
             isLoading: false,
             headers: [
@@ -164,14 +162,6 @@ export default {
                 .then(response => this.teamName = response.data.name)
                 .catch(error => console.error(error))
         },
-        onSearchInput() {
-            this.page = 1;
-        },
     },
 }
 </script>
-<style scoped>
-.v-pagination {
-    justify-content: center;
-}
-</style>

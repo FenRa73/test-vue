@@ -7,12 +7,12 @@
         <!-- Лоадер при загрузке -->
         <v-progress-circular v-if="isLoading" class="d-block mx-auto my-8" color="primary" indeterminate />
 
-        <!-- Сообщение, если лиг нет -->
+        <!-- Сообщение, если команд нет -->
         <v-alert v-else-if="filteredTeams.length === 0" class="ma-4" type="info">
             {{ searchQuery ? 'Ничего не найдено' : 'Нет доступных команд' }}
         </v-alert>
 
-        <!-- Карточки лиг + пагинация -->
+        <!-- Карточки команд + пагинация -->
         <template v-else>
             <v-row>
                 <v-col v-for="team in paginatedTeams" :key="team.id" cols="12" lg="3" md="4" sm="6">

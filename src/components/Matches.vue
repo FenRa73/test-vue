@@ -81,8 +81,6 @@ export default {
             dateFrom: null,
             dateTo: null,
             leagueName: null,
-            page: 1,
-            itemsPerPage: 12,
             matches: [],
             isLoading: false,
             headers: [
@@ -112,14 +110,6 @@ export default {
             if (!this.dateFrom) return
             return new Date(this.dateFrom).toLocaleString()
         },
-        // totalPages() {
-        //     return Math.ceil(this.matches.length / this.itemsPerPage)
-        // },
-        // paginatedLeagues() {
-        //     const start = (this.page - 1) * this.itemsPerPage
-        //     const end = start + this.itemsPerPage
-        //     return this.matches.slice(start, end)
-        // },
     },
     mounted() {
         this.loadMatches();
@@ -176,16 +166,6 @@ export default {
                 .catch(error => console.error(error))
                 .finally(() => this.isLoading = false);
         },
-
-
-        onSearchInput() {
-            this.page = 1;
-        },
     },
 }
 </script>
-<style scoped>
-.v-pagination {
-    justify-content: center;
-}
-</style>
