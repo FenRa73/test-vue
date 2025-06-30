@@ -30,11 +30,11 @@
                     </v-row>
 
                 </v-expansion-panel-title>
-                <v-col class="d-flex justify-center">
+                <v-col>
                     <v-btn @click="clearFilter">Очистить фильтр</v-btn>
                 </v-col>
                 <v-expansion-panel-text>
-                    <v-row justify="space-around" no-gutters>
+                    <v-row justify="space-around" no-gutters align-items="center">
                         <v-col cols="3">
                             <v-date-picker v-model="dateFrom" title="Начальная дата" header="Укажите дату" />
                         </v-col>
@@ -63,7 +63,8 @@
             </template>
 
             <template #item.score="{ item }">
-                {{ item.score?.fullTime.home }} - {{ item.score?.fullTime.away }} ( {{ item.score?.halfTime.home }} -
+                {{ item.score?.fullTime.home }} - {{ item.score?.fullTime.away }} ( {{ item.score?.halfTime.home
+                }} -
                 {{
                     item.score?.halfTime.away }} )
             </template>
@@ -160,7 +161,7 @@ export default {
         loadTeamName() {
             const teamId = this.$route.query.id;
             api.get(`api/v4/teams/${teamId}`)
-                .then(response => this.teamName = response.data.shortName)
+                .then(response => this.teamName = response.data.name)
                 .catch(error => console.error(error))
         },
         onSearchInput() {

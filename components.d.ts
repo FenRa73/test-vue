@@ -11,7 +11,6 @@ declare module 'vue' {
     Card: typeof import('./src/components/Card.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     Leagues: typeof import('./src/components/Leagues.vue')['default']
-    Liganame: typeof import('./src/components/Liganame.vue')['default']
     Matches: typeof import('./src/components/Matches.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
